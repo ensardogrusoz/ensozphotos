@@ -1,0 +1,51 @@
+body{
+    background: rgb(39, 39, 39);
+    color: white;
+    font-family: sans-serif;
+    margin: 0px;
+    padding:0px;
+}
+.header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: rgba(163, 23, 23, 0.527);
+    padding: 40px 0;
+    transition: 0.3s;
+}
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Text styles */
+    text-align: center;
+    color: white;
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.2)),url(images/IMG_4900-2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1{
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.hero h1 .logo-text{
+    margin-top: -.3em;
+}
+footer{
+    background: rgb(56, 56, 56);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+
+}
