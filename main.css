@@ -5,20 +5,26 @@
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 5px;
     overscroll-behavior: none;
+    
 
 }
+.wrapper-site{
+    overscroll-behavior: none;
+    overflow-x:hidden;
+    position: relative;
 
+}
 .logo{
     position: absolute;
     top: 8px;
     left: 16px;
     font-size: 28px;
 }
-/* nav{
+nav{
     display: flex;
     min-height: 4vh;
     letter-spacing: 4px;
-} */
+}
 
 .links{
     position: absolute;
@@ -94,6 +100,33 @@ a{
     margin: 10px;
 
 } */
+.container-about{
+    text-align: justify;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 600px;
+
+}
+.img-aboutme{
+    width: 700px;
+    padding-top: 10em;
+    padding-right: 20%;
+
+}
+.aboutme-description{
+    color: white;
+    padding:2em 24em;
+}
+
+.aboutme-description h3,
+.aboutme-description h1{
+    letter-spacing: 1.5px;
+    line-height: 2.1em;
+    margin-top: .4em;
+    text-align: justify;
+}
+
 
 
 
@@ -108,9 +141,10 @@ a{
 
 }
 @media (max-width: 730px){
-    body{
+    body,html {
         overflow-x: hidden;
-    }
+        }
+    
     .logo{
         font-size: 18px;
     }
@@ -130,8 +164,8 @@ a{
 
     }
     .links li{
-
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-top: 10px;
         padding-bottom: 20px;
         display: flex;
     
@@ -139,6 +173,18 @@ a{
     .burger-btn{
         display: flex;
         z-index: 2;
+    }
+    .aboutme-description{
+        color: white;
+        padding:1em 5em;
+    }
+    .img-aboutme{
+        width: 400px;
+        padding-top: 10em;
+        padding-right: 5em;
+        padding-left: 5em;
+        
+    
     }
 }
 .nav-active{
