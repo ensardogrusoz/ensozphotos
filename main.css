@@ -110,9 +110,11 @@ a{
 }
 .img-aboutme{
     width: 700px;
-    padding-top: 10em;
-    padding-right: 20%;
-
+    padding-top: 0em;
+    padding-right: 0;
+    border-radius: .4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
 }
 .aboutme-description{
     color: white;
@@ -124,22 +126,108 @@ a{
     letter-spacing: 1.5px;
     line-height: 2.1em;
     margin-top: .4em;
-    text-align: justify;
+    text-align: center;
+}
+.body-portfolio{
+    /* display: flex; */
+    width: 100%;
+    height:100vh;
+}
+.container-portfolio{
+    width: 100%;
+    max-width: 100rem;
+    margin: auto;
+    padding: 5rem 5rem
+}
+.img-gallary{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas: 
+            'img-7 img-2 img-9 img-9'
+            'img-7 img-4 img-5 img-6'
+            'img-1 img-8 img-3 img-6';
+}
+.img-gallary a{
+    width: 100%;
+    height: 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-gallary a ion-icon{
+    color: rgba(255, 255, 255, .6);
+    font-size: 3rem;
+    position: relative;
+    z-index: 100;
+    padding: 1rem 2rem;
+    border: 2px solid rgba(255, 255, 255, .6);
+    border-radius: .4rem;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.img-gallary a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: opacity .5s;
+
+}
+.img-gallary a:hover ion-icon,
+.img-gallary a:hover::before{
+    opacity: 1;
+} 
+.img-1{
+    grid-area: img-1;
+    background-image: url("images/20190616_194815.jpg");
+
+}
+.img-2{
+    grid-area: img-2;
+    background-image: url("images/IMG_20181229_200105_707.jpg");
+}
+.img-3{
+    grid-area: img-3;
+    background-image: url("images/IMG_20190102_123635_152.jpg");
+}
+.img-4{
+    grid-area: img-4;
+    background-image: url("images/IMG_20190116_153941_360.jpg");
+}
+.img-5{
+    grid-area: img-5;
+    background-image: url("images/IMG_20191103_175043_138.jpg");
+}
+.img-6{
+    grid-area: img-6;
+    min-height: 41.5rem;
+    background-image: url("images/IMG_4732.jpg");
+}
+.img-7{
+    grid-area: img-7;
+    background-image: url("images/IMG_4808.jpg");
+    min-height: 41.5rem;
+}
+.img-8{
+    grid-area: img-8;
+    background-image: url("images/IMG_4864.jpg");
+}
+.img-9{
+    grid-area: img-9;
+    background-image: url("images/IMG_4900-2.jpg");
 }
 
 
-
-
-@media (max-width: 500px){
-    .logo{
-        font-size: 18px;
-    }
-    
-    .burger-btn{
-        display:flex;
-    }
-
-}
 @media (max-width: 730px){
     body,html {
         overflow-x: hidden;
@@ -176,16 +264,68 @@ a{
     }
     .aboutme-description{
         color: white;
-        padding:1em 5em;
+        padding:1em 4em;
     }
-    .img-aboutme{
+    .wrapper{
+        margin: 0 auto;
         width: 400px;
-        padding-top: 10em;
-        padding-right: 5em;
-        padding-left: 5em;
-        
     
     }
+    .img-aboutme{
+        width: 300px;
+        margin: auto;
+    }
+    .img-gallary{
+        grid-template-areas: 
+        'img-7 img-7 img-1 img-1'
+        'img-7 img-7 img-5 img-5'
+        'img-2 img-2 img-6 img-6'
+        
+        'img-4 img-4 img-4 img-4'
+        'img-8 img-8 img-3 img-3'
+        'img-9 img-9 img-9 img-9';    }
+    .img-gallary a{
+        height: 25rem;
+    }
+    .img-7{
+        min-height: 51.5rem;
+    }
+    .img-6{
+        min-height: 25rem;
+    }
+
+}
+@media (max-width: 500px){
+    .logo{
+        font-size: 18px;
+    }
+    
+    .burger-btn{
+        display:flex;
+    }
+    .img-aboutme{
+        width: 300px;
+        margin: auto;
+    }
+    .img-gallary{
+        grid-template-areas: 
+        'img-7 img-7 img-7 img-7'
+        'img-1 img-1 img-1 img-1'
+        'img-5 img-5 img-5 img-5'
+        'img-2 img-2 img-2 img-2'
+        'img-6 img-6 img-6 img-6'
+        'img-4 img-4 img-4 img-4'
+        'img-8 img-8 img-8 img-8'
+        'img-3 img-3 img-3 img-3'
+        'img-9 img-9 img-9 img-9';
+    }
+    .img-gallary a,
+    .img-6,
+    .img-7{
+        height: 30rem;
+        min-height: 30rem;
+    }
+
 }
 .nav-active{
     transform: translateX(0%);
